@@ -5,6 +5,7 @@ export default defineNitroConfig({
   routeRules: {
     "/**": {
       cors: true
-    }
+    },
+    // "/server/api/**": { proxy: "/api/" },
   }
 });
