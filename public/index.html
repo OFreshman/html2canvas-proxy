@@ -6,30 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html2canvas-proxy</title>
     <style>
-      @keyframes shine {
-
-        /*创建动画*/
-        0% {
-          background-position: 0 0;
-        }
-
-        100% {
-          background-position: 100% 100%;
-        }
-      }
-
-      body {
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       .info {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #eee;
-
+        overflow: hidden;
       }
 
       .info span {
