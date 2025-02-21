@@ -25,13 +25,14 @@
       .info span {
         font-size: 3rem;
         font-weight: bold;
-        /* background-image: linear-gradient(90deg, #ff9966, #ff5e62, #4a90e2); */
-        background-image: linear-gradient(90deg, #6bb3f2, #6ae3b6, #c8a2c8);
-        background-size: 200% auto;
+        background-image: linear-gradient(90deg, #6bb3f2, #6ae3b6, #c8a2c8, #6bb3f2);
+        background-size: 300% auto;
+        /* 让渐变区域更大，平滑过渡 */
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        animation: gradientAnimation 4s linear infinite;
+        animation: gradientAnimation 6s ease-in-out infinite;
+        /* 过渡更顺滑 */
       }
 
       @keyframes gradientAnimation {
@@ -39,9 +40,15 @@
           background-position: 0% 50%;
         }
 
-        100% {
+        50% {
           background-position: 100% 50%;
         }
+
+        100% {
+          background-position: 0% 50%;
+        }
+
+        /* 循环回来，避免闪断 */
       }
     </style>
   </head>
@@ -49,7 +56,7 @@
   <body>
     <div class="info">
       <span>
-        Proxies For Html2cancas Page
+        Proxy For Html2cancas Page
       </span>
     </div>
   </body>
